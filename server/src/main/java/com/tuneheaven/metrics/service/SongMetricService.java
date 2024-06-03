@@ -12,14 +12,14 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
-public class SongMetricsService {
+public class SongMetricService {
 
-    private static final Logger LOG = LoggerFactory.getLogger(SongMetricsService.class);
+    private static final Logger LOG = LoggerFactory.getLogger(SongMetricService.class);
     private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMdd");
 
     private final SongArithmeticAverageScoreService songArithmeticAverageScoreService;
 
-    public SongMetricsService(SongArithmeticAverageScoreService songArithmeticAverageScoreService) {
+    public SongMetricService(SongArithmeticAverageScoreService songArithmeticAverageScoreService) {
         this.songArithmeticAverageScoreService = songArithmeticAverageScoreService;
     }
 
@@ -42,6 +42,7 @@ public class SongMetricsService {
 
     private Either<RestApiFailure, Tuple2<LocalDate, LocalDate>> performDateRangeValidation(LocalDate startDate, LocalDate endDate) {
         if (startDate.isAfter(endDate)) {
+            LOG.warn("Invalid date range. StartDate={} is after endDate={}", startDate, endDate);
             return Either.left(new RestApiFailure(403, "Invalid date range"));
         }
         return Either.right(new Tuple2<>(startDate, endDate));

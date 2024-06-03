@@ -1,6 +1,6 @@
-package com.tuneheaven.repository;
+package com.tuneheaven.metrics.repository;
 
-import com.tuneheaven.interfaces.SongMetricsRepository;
+import com.tuneheaven.metrics.interfaces.SongMetricsRepository;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
@@ -14,7 +14,6 @@ public class RepositoryConfig {
 
     @Bean
     SongMetricsRepository songMetricsRepository(NamedParameterJdbcTemplate metricsNamedParameterJdbcTemplate) {
-        System.out.println("song metric init");
         return new SongMetricsSqlRepository(metricsNamedParameterJdbcTemplate);
     }
 

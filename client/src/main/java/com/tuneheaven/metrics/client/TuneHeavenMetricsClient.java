@@ -1,4 +1,4 @@
-package com.tuneheaven.client;
+package com.tuneheaven.metrics.client;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,6 +22,8 @@ public class TuneHeavenMetricsClient {
                 .append(URL_CONTEXT)
                 .toString();
     }
+
+    public
 
 
 }

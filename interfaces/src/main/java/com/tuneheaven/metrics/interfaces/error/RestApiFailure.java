@@ -1,4 +1,4 @@
-package com.tuneheaven.interfaces.error;
+package com.tuneheaven.metrics.interfaces.error;
 
 public class RestApiFailure {
     private final Integer code;

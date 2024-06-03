@@ -1,4 +1,4 @@
-package com.tuneheaven.interfaces.model;
+package com.tuneheaven.metrics.interfaces.model;
 
 public class SongMetric {
 

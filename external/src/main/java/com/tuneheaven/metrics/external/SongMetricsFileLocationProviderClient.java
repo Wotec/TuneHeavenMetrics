@@ -1,2 +1,5 @@
-package com.tuneheaven.metrics.external;public class SongMetricsFileLocationProviderClient {
+package com.tuneheaven.metrics.external;
+
+public class SongMetricsFileLocationProviderClient {
+
 }

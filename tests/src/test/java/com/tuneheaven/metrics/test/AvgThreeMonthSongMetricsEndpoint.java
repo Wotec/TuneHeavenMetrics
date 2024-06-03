@@ -1,2 +1,4 @@
-package com.tuneheaven.metrics.test;public class AvgThreeMonthSongMetricsEndpoint {
+package com.tuneheaven.metrics.test;
+
+public class AvgThreeMonthSongMetricsEndpoint {
 }

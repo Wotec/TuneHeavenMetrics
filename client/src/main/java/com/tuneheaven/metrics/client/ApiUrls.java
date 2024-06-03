@@ -1,4 +1,4 @@
-package com.tuneheaven.client;
+package com.tuneheaven.metrics.client;
 
 public final class ApiUrls {
 

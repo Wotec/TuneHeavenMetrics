@@ -1,4 +1,4 @@
-package com.tuneheaven.interfaces;
+package com.tuneheaven.metrics.interfaces;
 
 public interface SongMetricsFileContent {
 }
